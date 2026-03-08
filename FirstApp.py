@@ -1,0 +1,27 @@
+import streamlit as st
+import pandas as pd
+st.set_page_config(page_title="My App", layout="wide")
+
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* Hides mobile bottom banner */
+    .viewerBadge_container__1QSob {display: none;}
+    .viewerBadge_link__1S137 {display: none;}
+    [data-testid="stToolbar"] {display: none;}
+    .stDeployButton {display: none;}
+    #stDecoration {display: none;}
+    </style>
+"""
+st.markdown(hide_style, unsafe_allow_html=True)
+
+st.title("Welcome to my page")
+
+st.text("Hello Akshay")
+df=pd.read_csv('UPI CB Due UPI CB Due.csv')
+st.write(df)
+Check=st.checkbox("Option1","Option2")
+st.write("Check")
